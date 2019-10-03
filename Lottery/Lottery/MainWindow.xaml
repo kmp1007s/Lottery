@@ -1,0 +1,21 @@
+﻿<Window x:Class="Lottery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lottery"
+        mc:Ignorable="d"
+        Title="로또 추첨 프로그램" Icon="Image/prize-winner.png">
+
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Color="#4e54c8" Offset="0"/>
+            <GradientStop Color="#2948ff" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    
+    <Grid>
+        <local:RandNumCtrl x:Name="randCtrl" Visibility="Visible"/>
+        <local:SimulCtrl x:Name="simulCtrl" Visibility="Collapsed"/>
+    </Grid>
+</Window>

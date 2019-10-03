@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="Lottery.SimulCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Lottery"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <Style x:Key="BtnBaseStyle" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="35"/>
+            <Setter Property="FontWeight" Value="Light"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="100"/>
+        </Style>
+        <Style x:Key="TextBaseStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+
+    <StackPanel HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Width="70" Height="50" HorizontalAlignment="Left"
+                Click="Prev_Ctrl" Margin="-100 0 0 0" Background="Transparent"
+                BorderBrush="Transparent">
+                <Image Source="Image/reply.png"/>
+            </Button>
+            <TextBlock Text="Simulation" Style="{StaticResource TextBaseStyle}" 
+                       FontWeight="Bold" FontSize="68"/>
+        </StackPanel>
+        <TextBlock Text="시뮬레이션 횟수를 입력해주세요" HorizontalAlignment="Center" 
+                   Style="{StaticResource TextBaseStyle}" Margin="20" />
+        <TextBox x:Name="simulCnt" Width="250" Height="Auto" 
+                 KeyDown="OnKeyDownHandler" Margin="0 0 0 60"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Width="200" Style="{StaticResource TextBaseStyle}" 
+                       Text="1등 당첨: " FontWeight="Bold"/>
+            <TextBlock Style="{StaticResource TextBaseStyle}" 
+                       x:Name="firstPrizeTxt" Text="0" 
+                       Width="170" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Width="200" Style="{StaticResource TextBaseStyle}" 
+                       Text="2등 당첨: " FontWeight="Bold"/>
+            <TextBlock Style="{StaticResource TextBaseStyle}" 
+                       x:Name="secondPrizeTxt" Text="0"
+                       Width="170"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Width="200" Style="{StaticResource TextBaseStyle}" 
+                       Text="3등 당첨: " FontWeight="Bold"/>
+            <TextBlock Style="{StaticResource TextBaseStyle}" 
+                       x:Name="thirdPrizeTxt" Text="0"
+                       Width="170"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Width="200" Style="{StaticResource TextBaseStyle}" 
+                       Text="4등 당첨: " FontWeight="Bold"/>
+            <TextBlock Style="{StaticResource TextBaseStyle}" 
+                       x:Name="fourthPrizeTxt" Text="0"
+                       Width="170"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Width="200" Style="{StaticResource TextBaseStyle}" 
+                       Text="5등 당첨: " FontWeight="Bold"/>
+            <TextBlock Style="{StaticResource TextBaseStyle}" 
+                       x:Name="fifthPrizeTxt" Text="0"
+                       Width="170"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Width="200" Style="{StaticResource TextBaseStyle}" 
+                       Text="꽝: " FontWeight="Bold"/>
+            <TextBlock Style="{StaticResource TextBaseStyle}" 
+                       x:Name="noPrizeTxt" Text="0"
+                       Width="170"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
